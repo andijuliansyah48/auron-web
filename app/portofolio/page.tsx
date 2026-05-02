@@ -19,7 +19,7 @@ export default function PortfolioPage() {
   return (
     <main className="min-h-screen bg-[#050505] text-white px-6 py-8">
       <nav className="max-w-6xl mx-auto flex justify-between items-center border-b border-white/10 pb-6">
-        <a href="/home" className="text-2xl font-black tracking-[-0.04em]">
+        <a href="/" className="text-2xl font-black tracking-[-0.04em]">
           AURON
         </a>
 
@@ -66,7 +66,9 @@ export default function PortfolioPage() {
 
                 <h3 className="text-3xl font-black">{item.title}</h3>
 
-                <p className="mt-3 text-neutral-300 max-w-sm">{item.desc}</p>
+                <p className="mt-3 text-neutral-300 max-w-sm">
+                  {item.desc}
+                </p>
               </div>
             </div>
           ))}

@@ -16,7 +16,7 @@ export default function HomePage() {
       <div className="fixed inset-0 pointer-events-none bg-[radial-gradient(circle_at_top_right,rgba(250,204,21,0.12),transparent_30%),radial-gradient(circle_at_bottom_left,rgba(37,99,235,0.12),transparent_30%)]" />
 
       <nav className="relative max-w-6xl mx-auto flex justify-between items-center border-b border-white/10 pb-6">
-        <a href="/home" className="text-2xl font-black tracking-[-0.04em]">
+        <a href="/" className="text-2xl font-black tracking-[-0.04em]">
           AURON
         </a>
 
