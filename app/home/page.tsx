@@ -15,7 +15,6 @@ export default function HomePage() {
     <main className="min-h-screen bg-[#050505] text-white px-6 py-8 overflow-hidden">
       <div className="fixed inset-0 pointer-events-none bg-[radial-gradient(circle_at_top_right,rgba(250,204,21,0.12),transparent_30%),radial-gradient(circle_at_bottom_left,rgba(37,99,235,0.12),transparent_30%)]" />
 
-      {/* NAV */}
       <nav className="relative max-w-6xl mx-auto flex justify-between items-center border-b border-white/10 pb-6">
         <a href="/home" className="text-2xl font-black tracking-[-0.04em]">
           AURON
@@ -29,7 +28,6 @@ export default function HomePage() {
         </WhatsappButton>
       </nav>
 
-      {/* HERO */}
       <section className="relative max-w-6xl mx-auto pt-24 pb-24 grid md:grid-cols-2 gap-16 items-center">
         <motion.div {...fadeUp}>
           <p className="text-sm tracking-[0.45em] text-yellow-400 mb-6">
@@ -53,7 +51,11 @@ export default function HomePage() {
           </WhatsappButton>
         </motion.div>
 
-        <motion.div {...fadeUp} transition={{ delay: 0.2 }} className="relative">
+        <motion.div
+          {...fadeUp}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+          className="relative"
+        >
           <div className="absolute -inset-4 bg-yellow-400/10 blur-3xl rounded-full" />
           <img
             src="/jersey1.png"
@@ -63,7 +65,6 @@ export default function HomePage() {
         </motion.div>
       </section>
 
-      {/* EXPLORE */}
       <section className="relative max-w-6xl mx-auto py-28 border-t border-white/10">
         <motion.p
           {...fadeUp}
@@ -103,7 +104,7 @@ export default function HomePage() {
               key={item.title}
               href={item.href}
               {...fadeUp}
-              transition={{ delay: i * 0.1 }}
+              transition={{ duration: 0.6, ease: "easeOut", delay: i * 0.1 }}
               className="relative group h-[300px] md:h-[340px] rounded-3xl overflow-hidden border border-white/10 hover:border-yellow-400/50 transition"
             >
               <img
@@ -128,7 +129,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* WHY AURON */}
       <section className="relative max-w-6xl mx-auto py-24 border-t border-white/10">
         <motion.div {...fadeUp}>
           <p className="text-sm tracking-[0.45em] text-yellow-400 mb-6">
@@ -161,7 +161,7 @@ export default function HomePage() {
             <motion.div
               key={item.title}
               {...fadeUp}
-              transition={{ delay: i * 0.15 }}
+              transition={{ duration: 0.6, ease: "easeOut", delay: i * 0.15 }}
               className="relative group h-[300px] md:h-[340px] rounded-3xl overflow-hidden border border-white/10 hover:border-yellow-400/50 transition"
             >
               <img
@@ -186,7 +186,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* CTA */}
       <section className="relative max-w-4xl mx-auto py-24 text-center border-t border-white/10">
         <motion.div {...fadeUp}>
           <h2 className="text-4xl md:text-6xl font-black leading-tight">
@@ -202,7 +201,6 @@ export default function HomePage() {
         </motion.div>
       </section>
 
-      {/* FOOTER */}
       <footer className="relative max-w-6xl mx-auto py-14 border-t border-white/10 flex flex-col md:flex-row justify-between gap-6 text-neutral-500">
         <p>AURON FACTORY — MADE FOR VICTORY</p>
         <p>Palembang, Sumatera Selatan</p>
