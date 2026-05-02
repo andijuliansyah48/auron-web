@@ -7,9 +7,9 @@ export default function WelcomePage() {
     <main className="min-h-screen bg-black text-white flex items-center justify-center px-6 overflow-hidden relative">
       
       {/* BACKGROUND GLOW */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(250,204,21,0.16),transparent_35%)]" />
+      <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_center,rgba(250,204,21,0.16),transparent_35%)]" />
 
-      <section className="relative max-w-6xl mx-auto text-center">
+      <section className="relative max-w-6xl mx-auto text-center z-10">
 
         {/* TAGLINE */}
         <p className="text-xs tracking-[0.5em] text-yellow-400 mb-3">
@@ -40,13 +40,13 @@ export default function WelcomePage() {
 
         {/* CTA MASUK WEBSITE */}
         <a
-          href="/"
+          href="/home"
           className="inline-block mt-12 border border-yellow-400/50 px-12 py-4 text-sm tracking-[0.35em] text-yellow-400 hover:bg-yellow-400 hover:text-black transition"
         >
           ENTER
         </a>
 
-        {/* CTA WHATSAPP (TRACKED) */}
+        {/* CTA WHATSAPP */}
         <div className="mt-6">
           <WhatsappButton
             label="welcome_contact"
