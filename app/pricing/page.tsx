@@ -57,7 +57,9 @@ export default function PricingPage() {
     <main className="min-h-screen bg-[#050505] text-white px-6 py-10">
       {/* NAV */}
       <nav className="max-w-6xl mx-auto flex justify-between items-center border-b border-white/10 pb-6">
-        <h1 className="text-2xl font-black">AURON</h1>
+        <a href="/" className="text-2xl font-black tracking-[-0.04em]">
+          AURON
+        </a>
 
         <a
           href="/"
@@ -139,7 +141,9 @@ export default function PricingPage() {
         </div>
 
         <div className="border border-white/10 p-8 rounded-3xl bg-white/[0.04]">
-          <h3 className="text-xl font-bold mb-6 text-yellow-400">Add-On</h3>
+          <h3 className="text-xl font-bold mb-6 text-yellow-400">
+            Add-On
+          </h3>
           {addons.map((item) => (
             <p key={item} className="text-neutral-400 mb-3">
               {item}
@@ -148,7 +152,9 @@ export default function PricingPage() {
         </div>
 
         <div className="border border-white/10 p-8 rounded-3xl bg-white/[0.04]">
-          <h3 className="text-xl font-bold mb-6 text-yellow-400">Bonus</h3>
+          <h3 className="text-xl font-bold mb-6 text-yellow-400">
+            Bonus
+          </h3>
           {bonuses.map((item) => (
             <p key={item} className="text-neutral-400 mb-3">
               {item}
@@ -168,8 +174,8 @@ export default function PricingPage() {
         </h2>
 
         <p className="mt-6 text-neutral-400 text-lg max-w-xl mx-auto">
-          Ceritakan kebutuhan tim kamu, jumlah order, dan konsep desainnya. Kami
-          bantu arahkan paket terbaik.
+          Ceritakan kebutuhan tim kamu, jumlah order, dan konsep desainnya.
+          Kami bantu arahkan paket terbaik.
         </p>
 
         <div className="mt-10 flex justify-center">
@@ -183,9 +189,9 @@ export default function PricingPage() {
       </section>
 
       {/* FOOTER */}
-      <footer className="max-w-6xl mx-auto mt-20 pt-10 border-t border-white/10 text-neutral-500 flex justify-between">
-        <p>AURON FACTORY</p>
-        <p>Palembang, Indonesia</p>
+      <footer className="max-w-6xl mx-auto mt-20 pt-10 border-t border-white/10 text-neutral-500 flex flex-col md:flex-row justify-between gap-4">
+        <p>AURON FACTORY — MADE FOR VICTORY</p>
+        <p>Palembang, Sumatera Selatan</p>
       </footer>
     </main>
   );

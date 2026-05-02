@@ -1,10 +1,13 @@
+import WhatsappButton from "@/components/WhatsappButton";
+
 export default function StoryPage() {
   return (
     <main className="min-h-screen bg-[#050505] text-white px-6 py-10">
-      
       {/* NAV */}
       <nav className="max-w-6xl mx-auto flex justify-between items-center border-b border-white/10 pb-6">
-        <h1 className="text-2xl font-black">AURON</h1>
+        <a href="/" className="text-2xl font-black tracking-[-0.04em]">
+          AURON
+        </a>
 
         <a
           href="/"
@@ -50,18 +53,18 @@ export default function StoryPage() {
 
       {/* CTA */}
       <section className="max-w-6xl mx-auto mt-20 text-center">
-        <a
-          href="https://wa.me/628131772818?text=Halo%20Auron%2C%20saya%20mau%konsultasu%desain.%0A%0ANama%20Tim%3A%0AJumlah%3A%0AKonsep%3A"
+        <WhatsappButton
+          label="story_bottom_cta"
           className="inline-block bg-yellow-400 text-black px-10 py-4 font-bold tracking-widest hover:bg-white transition"
         >
           START YOUR DESIGN
-        </a>
+        </WhatsappButton>
       </section>
 
       {/* FOOTER */}
-      <footer className="max-w-6xl mx-auto mt-20 pt-10 border-t border-white/10 text-neutral-500 flex justify-between">
-        <p>AURON FACTORY</p>
-        <p>Palembang, Indonesia</p>
+      <footer className="max-w-6xl mx-auto mt-20 pt-10 border-t border-white/10 text-neutral-500 flex flex-col md:flex-row justify-between gap-4">
+        <p>AURON FACTORY — MADE FOR VICTORY</p>
+        <p>Palembang, Sumatera Selatan</p>
       </footer>
     </main>
   );

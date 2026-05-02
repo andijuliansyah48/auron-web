@@ -19,8 +19,11 @@ export default function ProcessPage() {
 
   return (
     <main className="min-h-screen bg-[#050505] text-white px-6 py-10">
+      {/* NAV */}
       <nav className="max-w-6xl mx-auto flex justify-between items-center border-b border-white/10 pb-6">
-        <h1 className="text-2xl font-black">AURON</h1>
+        <a href="/" className="text-2xl font-black tracking-[-0.04em]">
+          AURON
+        </a>
 
         <a
           href="/"
@@ -30,6 +33,7 @@ export default function ProcessPage() {
         </a>
       </nav>
 
+      {/* HERO */}
       <section className="max-w-6xl mx-auto pt-16 pb-20">
         <p className="text-sm tracking-[0.4em] text-yellow-400 mb-6">
           PROCESS
@@ -45,7 +49,8 @@ export default function ProcessPage() {
         </p>
       </section>
 
-      <section className="max-w-6xl mx-auto grid md:grid-cols-5 gap-6">
+      {/* STEPS */}
+      <section className="max-w-6xl mx-auto grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
         {process.map(([step, title, desc]) => (
           <div
             key={step}
@@ -62,6 +67,7 @@ export default function ProcessPage() {
         ))}
       </section>
 
+      {/* CTA */}
       <section className="max-w-6xl mx-auto mt-32 border-t border-white/10 pt-20 text-center">
         <p className="text-sm tracking-[0.45em] text-yellow-400 mb-6">
           START YOUR ORDER
@@ -86,9 +92,10 @@ export default function ProcessPage() {
         </div>
       </section>
 
-      <footer className="max-w-6xl mx-auto mt-20 pt-10 border-t border-white/10 text-neutral-500 flex justify-between">
-        <p>AURON FACTORY</p>
-        <p>Palembang, Indonesia</p>
+      {/* FOOTER */}
+      <footer className="max-w-6xl mx-auto mt-20 pt-10 border-t border-white/10 text-neutral-500 flex flex-col md:flex-row justify-between gap-4">
+        <p>AURON FACTORY — MADE FOR VICTORY</p>
+        <p>Palembang, Sumatera Selatan</p>
       </footer>
     </main>
   );
