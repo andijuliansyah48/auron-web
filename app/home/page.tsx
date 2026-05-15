@@ -35,7 +35,7 @@ export default function HomePage() {
           </p>
 
           <h2 className="text-5xl md:text-7xl font-black leading-[0.95] tracking-[-0.05em]">
-            Jersey bukan sekadar desain. Ini identitas tim lo.
+            Jersey bukan sekadar desain. Ini identitas tim.
           </h2>
 
           <p className="mt-8 text-neutral-400 text-lg leading-relaxed max-w-xl">
