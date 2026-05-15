@@ -1,21 +1,56 @@
 import WhatsappButton from "@/components/WhatsappButton";
 
 export default function PortfolioPage() {
-  const portfolio = [
-    {
-      img: "/jersey1.png",
-      title: "Phoenix",
-      label: "CUSTOM FOOTBALL JERSEY",
-      desc: "Clean blue identity dengan detail klasik dan kesan elite.",
-    },
-    {
-      img: "/jersey2.png",
-      title: "Miami F.C",
-      label: "CUSTOM TEAM JERSEY",
-      desc: "Visual bold dengan nuansa neon, cocok untuk tim yang ingin standout.",
-    },
-  ];
-
+ const portfolio = [
+  {
+    img: "/jersey1.png",
+    title: "Phoenix",
+    label: "CUSTOM FOOTBALL JERSEY",
+    desc: "Clean blue identity dengan detail klasik dan kesan elite.",
+  },
+  {
+    img: "/jersey2.png",
+    title: "Miami F.C",
+    label: "CUSTOM TEAM JERSEY",
+    desc: "Visual bold dengan nuansa neon, cocok untuk tim yang ingin standout.",
+  },
+  {
+    img: "/jersey3.png",
+    title: "Sudirman",
+    label: "CUSTOM FOOTBALL JERSEY",
+    desc: "Dark tactical look dengan karakter tegas dan profesional.",
+  },
+  {
+    img: "/jersey4.png",
+    title: "Evergreen Ivory",
+    label: "CUSTOM FOOTBALL JERSEY",
+    desc: "Kombinasi putih dan hijau dengan nuansa clean, klasik, dan fresh.",
+  },
+  {
+    img: "/jersey5.png",
+    title: "Galaxy",
+    label: "CUSTOM TEAM JERSEY",
+    desc: "Identitas biru yang clean dengan detail modern dan sporty.",
+  },
+  {
+    img: "/jersey6.png",
+    title: "Guard Ball",
+    label: "CUSTOM FOOTBALL JERSEY",
+    desc: "Look maroon-gold yang terasa premium, heritage, dan powerful.",
+  },
+  {
+    img: "/jersey7.png",
+    title: "The Growt",
+    label: "CUSTOM FOOTBALL JERSEY",
+    desc: "Tema vintage luxury dengan warna soft dan detail ornamental.",
+  },
+  {
+    img: "/jersey8.png",
+    title: "Green Leaf Rangers",
+    label: "CUSTOM FOOTBALL JERSEY",
+    desc: "Motif hijau yang bold dengan nuansa natural, solid, dan kompetitif.",
+  },
+];
   return (
     <main className="min-h-screen bg-[#050505] text-white px-6 py-8">
       <nav className="max-w-6xl mx-auto flex justify-between items-center border-b border-white/10 pb-6">
