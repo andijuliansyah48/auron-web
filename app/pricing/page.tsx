@@ -3,16 +3,9 @@ import WhatsappButton from "@/components/WhatsappButton";
 export default function PricingPage() {
   const packages = [
     {
-      image: "/images/package-basic.png",
-      name: "Print Baju, Lengan Non Print",
-      price: "Rp120.000",
-      desc: "Cocok untuk tim yang ingin tampil rapi dengan budget efisien.",
-      label: "pricing_package_120k",
-    },
-    {
       image: "/images/package-standard.png",
       name: "Print Baju Saja",
-      price: "Rp130.000",
+      price: "Rp150.000",
       desc: "Pilihan paling seimbang antara visual dan harga.",
       badge: "MOST POPULAR",
       highlight: true,
@@ -21,7 +14,7 @@ export default function PricingPage() {
     {
       image: "/images/package-premium.png",
       name: "Full Print",
-      price: "Rp150.000",
+      price: "Rp160.000",
       desc: "Untuk tim yang ingin tampil maksimal tanpa kompromi.",
       label: "pricing_package_150k",
     },
@@ -31,7 +24,7 @@ export default function PricingPage() {
     "Milano: Free",
     "Airwalk: +Rp10.000",
     "Emboss: +Rp20.000",
-    "Jacquard: +Rp30.000",
+    "Jacquard: +Rp25.000",
   ];
 
   const addons = [
@@ -54,7 +47,7 @@ export default function PricingPage() {
   ];
 
   return (
-    <main className="min-h-screen bg-[#050505] text-white px-6 py-10">
+    <main className="min-h-screen bg-[#050505] text-white px-6 md:px-16 py-10">
       {/* NAV */}
       <nav className="max-w-6xl mx-auto flex justify-between items-center border-b border-white/10 pb-6">
         <a href="/" className="text-2xl font-black tracking-[-0.04em]">
@@ -81,7 +74,7 @@ export default function PricingPage() {
       </section>
 
       {/* PACKAGES */}
-      <section className="max-w-6xl mx-auto grid md:grid-cols-3 gap-6">
+      <section className="w-full max-w-none grid md:grid-cols-2 gap-6">
         {packages.map((item) => (
           <div
             key={item.name}
