@@ -28,7 +28,7 @@ export default function PricingPage() {
   ];
 
   const addons = [
-    "Tanpa celana: -Rp20.000",
+    "Tanpa celana: -Rp40.000",
     "Size anak: -Rp15.000",
     "Lengan panjang: +Rp10.000 / +Rp15.000",
     "Celana 3/4: +Rp10.000 / +Rp15.000",
