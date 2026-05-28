@@ -1,61 +1,61 @@
-"use client";
+export default function LinksPage() {
+  const links = [
+    { title: "ORDER VIA WHATSAPP", href: "https://wa.me/628131772818" },
+    { title: "WEBSITE", href: "https://auron.id" },
+    { title: "INSTAGRAM", href: "https://www.instagram.com/auron.factory" },
+    { title: "ALAMAT WORKSHOP", href: "https://maps.app.goo.gl/9vY1noxXFah9pXwX6" },
+    { title: "KATALOG JERSEY", href: "https://drive.google.com/file/d/1GmgFVpM5Ga1SAOpkBjOJWEiP3NMQDWEe/view?usp=sharing" },
+    { title: "KATALOG PAKAIAN UMUM", href: "https://drive.google.com/file/d/1lD1zXkZTJUagQcB9nhCldhHrM9KSsYuO/view?usp=sharing" },
+  ];
 
-import WhatsappButton from "@/components/WhatsappButton";
-
-export default function WelcomePage() {
   return (
-    <main className="min-h-screen bg-black text-white flex items-center justify-center px-6 overflow-hidden relative">
-      
-      {/* BACKGROUND GLOW */}
-      <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_center,rgba(250,204,21,0.16),transparent_35%)]" />
+    <main
+      className="relative min-h-screen text-white px-5 py-8 flex justify-center bg-cover bg-center"
+      style={{
+        backgroundImage: "url('/images/bg-links.png')",
+      }}
+    >
+      <div className="absolute inset-0 bg-black/70" />
 
-      <section className="relative max-w-6xl mx-auto text-center z-10">
-
-        {/* TAGLINE */}
-        <p className="text-xs tracking-[0.5em] text-yellow-400 mb-3">
-          CUSTOM JERSEY MANUFACTURER
-        </p>
-
-        <p className="text-xs tracking-[0.3em] text-yellow-400 mb-8">
-          PALEMBANG, INDONESIA
-        </p>
-
-        {/* LOGO + TITLE */}
-        <div className="flex items-center justify-center gap-8 md:gap-12">
+      <section className="relative z-10 w-full max-w-md">
+        <div className="text-center pt-8 pb-10">
           <img
             src="/auron-logo.png"
-            alt="Auron Logo"
-            className="w-20 md:w-32 drop-shadow-[0_0_50px_rgba(250,204,21,0.35)]"
+            alt="Auron Factory"
+            className="w-28 h-28 mx-auto mb-6 object-contain"
           />
 
-          <h1 className="text-6xl md:text-9xl font-black tracking-[-0.06em]">
-            AURON
+          <p className="text-xs tracking-[0.45em] text-yellow-400 mb-3">
+            MADE FOR VICTORY
+          </p>
+
+          <h1 className="text-4xl font-black tracking-[-0.05em]">
+            AURON FACTORY
           </h1>
+
+          <p className="mt-4 text-neutral-400 leading-relaxed">
+            Custom Jersey Apparel Palembang
+            <br />
+            Monday-Saturday 08.00–17.00
+          </p>
         </div>
 
-        {/* TAGLINE */}
-        <p className="mt-8 text-sm md:text-xl text-neutral-300 tracking-[0.35em]">
-          MADE FOR VICTORY
-        </p>
-
-        {/* CTA MASUK WEBSITE */}
-        <a
-          href="/home"
-          className="inline-block mt-12 border border-yellow-400/50 px-12 py-4 text-sm tracking-[0.35em] text-yellow-400 hover:bg-yellow-400 hover:text-black transition"
-        >
-          ENTER
-        </a>
-
-        {/* CTA WHATSAPP */}
-        <div className="mt-6">
-          <WhatsappButton
-            label="welcome_contact"
-            className="text-sm text-neutral-500 hover:text-white transition"
-          >
-            Contact via WhatsApp
-          </WhatsappButton>
+        <div className="space-y-4">
+          {links.map((item) => (
+            <a
+              key={item.title}
+              href={item.href}
+              target={item.href.startsWith("http") ? "_blank" : "_self"}
+              className="group block border border-yellow-400 bg-yellow-400 text-black rounded-none px-6 py-5 text-center font-bold tracking-wide hover:bg-yellow-300 transition"
+            >
+              {item.title}
+            </a>
+          ))}
         </div>
 
+        <footer className="text-center mt-10 text-xs text-neutral-500 tracking-[0.3em]">
+          AURON FACTORY — PALEMBANG
+        </footer>
       </section>
     </main>
   );
