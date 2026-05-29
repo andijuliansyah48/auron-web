@@ -1,7 +1,7 @@
 export default function LinksPage() {
   const links = [
     { title: "ORDER VIA WHATSAPP", href: "https://wa.me/628131772818" },
-    { title: "WEBSITE", href: "https://auron.id" },
+    { title: "WEBSITE", href: "https://auron.id/links" },
     { title: "INSTAGRAM", href: "https://www.instagram.com/auron.factory" },
     { title: "ALAMAT WORKSHOP", href: "https://maps.app.goo.gl/9vY1noxXFah9pXwX6" },
     { title: "KATALOG JERSEY", href: "https://drive.google.com/file/d/1GmgFVpM5Ga1SAOpkBjOJWEiP3NMQDWEe/view?usp=sharing" },
