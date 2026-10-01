@@ -1,7 +1,8 @@
+import Image from "next/image";
 export default function LinksPage() {
   const links = [
     { title: "ORDER VIA WHATSAPP", href: "https://wa.me/628131772818" },
-    { title: "WEBSITE", href: "https://auron.id/links" },
+    { title: "WEBSITE", href: "/home" },
     { title: "INSTAGRAM", href: "https://www.instagram.com/auron.factory" },
     { title: "ALAMAT WORKSHOP", href: "https://maps.app.goo.gl/9vY1noxXFah9pXwX6" },
     { title: "KATALOG JERSEY", href: "https://drive.google.com/file/d/1GmgFVpM5Ga1SAOpkBjOJWEiP3NMQDWEe/view?usp=sharing" },
@@ -12,15 +13,17 @@ export default function LinksPage() {
     <main
       className="relative min-h-screen text-white px-5 py-8 flex justify-center bg-cover bg-center"
       style={{
-        backgroundImage: "url('/images/bg-links.png')",
+        backgroundImage: "url('/images/bg-links.webp')",
       }}
     >
       <div className="absolute inset-0 bg-black/70" />
 
       <section className="relative z-10 w-full max-w-md">
         <div className="text-center pt-8 pb-10">
-          <img
-            src="/auron-logo.png"
+          <Image
+            src="/auron-logo.webp"
+            width={112}
+            height={112}
             alt="Auron Factory"
             className="w-28 h-28 mx-auto mb-6 object-contain"
           />
@@ -46,6 +49,7 @@ export default function LinksPage() {
               key={item.title}
               href={item.href}
               target={item.href.startsWith("http") ? "_blank" : "_self"}
+              rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
               className="group block border border-yellow-400 bg-yellow-400 text-black rounded-none px-6 py-5 text-center font-bold tracking-wide hover:bg-yellow-300 transition"
             >
               {item.title}

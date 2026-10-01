@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import WhatsappButton from "@/components/WhatsappButton";
 
 export default function WelcomePage() {
@@ -21,9 +22,11 @@ export default function WelcomePage() {
         </p>
 
         {/* LOGO + TITLE */}
-        <div className="flex items-center justify-center gap-8 md:gap-12">
-          <img
-            src="/auron-logo.png"
+        <div className="flex items-center justify-center flex-col gap-4 sm:flex-row sm:gap-8 md:gap-12">
+          <Image
+            src="/auron-logo.webp"
+            width={128}
+            height={128}
             alt="Auron Logo"
             className="w-20 md:w-32 drop-shadow-[0_0_50px_rgba(250,204,21,0.35)]"
           />
@@ -43,7 +46,7 @@ export default function WelcomePage() {
           href="/home"
           className="inline-block mt-12 border border-yellow-400/50 px-12 py-4 text-sm tracking-[0.35em] text-yellow-400 hover:bg-yellow-400 hover:text-black transition"
         >
-          ENTER
+          LIHAT WEBSITE
         </a>
 
         {/* CTA WHATSAPP */}
@@ -52,7 +55,7 @@ export default function WelcomePage() {
             label="welcome_contact"
             className="text-sm text-neutral-500 hover:text-white transition"
           >
-            Contact via WhatsApp
+            Konsultasi via WhatsApp
           </WhatsappButton>
         </div>
 

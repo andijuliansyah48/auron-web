@@ -1,77 +1,68 @@
+import Image from "next/image";
+import SiteNav from "@/components/SiteNav";
 import WhatsappButton from "@/components/WhatsappButton";
 
 export default function PortfolioPage() {
  const portfolio = [
   {
-    img: "/jersey1.png",
+    img: "/jersey1.webp",
     title: "Phoenix",
     label: "CUSTOM FOOTBALL JERSEY",
     desc: "Clean blue identity dengan detail klasik dan kesan elite.",
   },
   {
-    img: "/jersey2.png",
+    img: "/jersey2.webp",
     title: "Miami F.C",
     label: "CUSTOM TEAM JERSEY",
     desc: "Visual bold dengan nuansa neon, cocok untuk tim yang ingin standout.",
   },
   {
-    img: "/jersey3.png",
+    img: "/jersey3.webp",
     title: "Sudirman",
     label: "CUSTOM FOOTBALL JERSEY",
     desc: "Dark tactical look dengan karakter tegas dan profesional.",
   },
   {
-    img: "/jersey4.png",
+    img: "/jersey4.webp",
     title: "Evergreen Ivory",
     label: "CUSTOM FOOTBALL JERSEY",
     desc: "Kombinasi putih dan hijau dengan nuansa clean, klasik, dan fresh.",
   },
   {
-    img: "/jersey5.png",
+    img: "/jersey5.webp",
     title: "Galaxy",
     label: "CUSTOM TEAM JERSEY",
     desc: "Identitas biru yang clean dengan detail modern dan sporty.",
   },
   {
-    img: "/jersey6.png",
+    img: "/jersey6.webp",
     title: "Guard Ball",
     label: "CUSTOM FOOTBALL JERSEY",
     desc: "Look maroon-gold yang terasa premium, heritage, dan powerful.",
   },
   {
-    img: "/jersey7.png",
+    img: "/jersey7.webp",
     title: "The Growt",
     label: "CUSTOM FOOTBALL JERSEY",
     desc: "Tema vintage luxury dengan warna soft dan detail ornamental.",
   },
   {
-    img: "/jersey8.png",
+    img: "/jersey8.webp",
     title: "Green Leaf Rangers",
     label: "CUSTOM FOOTBALL JERSEY",
     desc: "Motif hijau yang bold dengan nuansa natural, solid, dan kompetitif.",
   },
 ];
   return (
-    <main className="min-h-screen bg-[#050505] text-white px-6 py-8">
-      <nav className="max-w-6xl mx-auto flex justify-between items-center border-b border-white/10 pb-6">
-        <a href="/" className="text-2xl font-black tracking-[-0.04em]">
-          AURON
-        </a>
+    <main className="min-h-screen bg-[#050505] text-white px-5 py-5 md:px-6 md:py-8">
+      <SiteNav />
 
-        <WhatsappButton
-          label="portfolio_nav_order"
-          className="text-sm border border-yellow-400/50 text-yellow-400 px-5 py-2 hover:bg-yellow-400 hover:text-black transition"
-        >
-          ORDER NOW
-        </WhatsappButton>
-      </nav>
-
-      <section className="max-w-6xl mx-auto py-24">
+      <section className="max-w-6xl mx-auto py-10 md:py-24">
         <p className="text-sm tracking-[0.45em] text-yellow-400 mb-6">
           PORTFOLIO
         </p>
 
-        <h1 className="text-5xl md:text-7xl font-black tracking-[-0.05em] leading-tight max-w-4xl">
+        <h1 className="text-4xl md:text-7xl font-black tracking-[-0.05em] leading-tight max-w-4xl">
           Desain jersey dengan karakter yang kuat.
         </h1>
 
@@ -80,22 +71,24 @@ export default function PortfolioPage() {
           bukan sekadar punya seragam.
         </p>
 
-        <div className="grid md:grid-cols-2 gap-8 mt-16">
+        <div className="grid md:grid-cols-2 gap-5 mt-8 md:gap-8 md:mt-16">
           {portfolio.map((item) => (
             <div
               key={item.title}
-              className="group relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.03]"
+              className="group relative overflow-hidden aspect-[4/5] rounded-2xl md:rounded-[2rem] border border-white/10 bg-white/[0.03]"
             >
-              <img
+              <Image
                 src={item.img}
+                fill
+                sizes="(min-width: 1200px) 560px, (min-width: 768px) 45vw, calc(100vw - 40px)"
                 alt={item.title}
                 className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
               />
 
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-80" />
 
-              <div className="absolute bottom-0 left-0 right-0 p-8">
-                <p className="text-xs tracking-[0.35em] text-yellow-400 mb-3">
+              <div className="absolute bottom-0 left-0 right-0 p-5 md:p-8">
+                <p className="text-xs tracking-[0.15em] md:tracking-[0.35em] text-yellow-400 mb-3">
                   {item.label}
                 </p>
 
@@ -109,12 +102,12 @@ export default function PortfolioPage() {
           ))}
         </div>
 
-        <div className="mt-32 border-t border-white/10 pt-20 text-center">
+        <div className="mt-12 md:mt-32 border-t border-white/10 pt-10 md:pt-20 text-center">
           <p className="text-sm tracking-[0.45em] text-yellow-400 mb-6">
             START YOUR DESIGN
           </p>
 
-          <h2 className="text-4xl md:text-6xl font-black tracking-[-0.05em] leading-tight max-w-3xl mx-auto">
+          <h2 className="text-3xl md:text-6xl font-black tracking-[-0.05em] leading-tight max-w-3xl mx-auto">
             Sekarang giliran tim kamu tampil beda.
           </h2>
 

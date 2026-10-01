@@ -1,9 +1,11 @@
+import Image from "next/image";
+import SiteNav from "@/components/SiteNav";
 import WhatsappButton from "@/components/WhatsappButton";
 
 export default function PricingPage() {
   const packages = [
     {
-      image: "/images/package-standard.png",
+      image: "/images/package-standard.webp",
       name: "Print Baju Saja",
       price: "Rp150.000",
       desc: "Pilihan paling seimbang antara visual dan harga.",
@@ -12,7 +14,7 @@ export default function PricingPage() {
       label: "pricing_package_130k",
     },
     {
-      image: "/images/package-premium.png",
+      image: "/images/package-premium.webp",
       name: "Full Print",
       price: "Rp160.000",
       desc: "Untuk tim yang ingin tampil maksimal tanpa kompromi.",
@@ -47,71 +49,62 @@ export default function PricingPage() {
   ];
 
   return (
-    <main className="min-h-screen bg-[#050505] text-white px-6 md:px-16 py-10">
+    <main className="min-h-screen bg-[#050505] text-white px-5 py-5 md:px-16 md:py-10">
       {/* NAV */}
-      <nav className="max-w-6xl mx-auto flex justify-between items-center border-b border-white/10 pb-6">
-        <a href="/" className="text-2xl font-black tracking-[-0.04em]">
-          AURON
-        </a>
-
-        <a
-          href="/"
-          className="text-sm border border-white/20 px-4 py-2 hover:bg-white hover:text-black transition"
-        >
-          BACK
-        </a>
-      </nav>
+      <SiteNav />
 
       {/* HERO */}
-      <section className="max-w-6xl mx-auto pt-16 pb-20">
+      <section className="max-w-6xl mx-auto pt-10 pb-8 md:pt-16 md:pb-20">
         <p className="text-sm tracking-[0.4em] text-yellow-400 mb-6">
           PRICE LIST
         </p>
 
-        <h1 className="text-5xl md:text-7xl font-black leading-tight max-w-3xl">
+        <h1 className="text-4xl md:text-7xl font-black leading-tight max-w-3xl">
           Pilih paket jersey sesuai kebutuhan tim lo.
         </h1>
       </section>
 
       {/* PACKAGES */}
-      <section className="w-full max-w-none grid md:grid-cols-2 gap-6">
+      <section className="max-w-6xl mx-auto grid md:grid-cols-2 gap-6">
         {packages.map((item) => (
           <div
             key={item.name}
-            className={`group relative overflow-hidden rounded-3xl bg-white/[0.04] border transition duration-500 ${
+            className={`group relative flex flex-col overflow-hidden rounded-3xl bg-white/[0.04] border transition duration-500 ${
               item.highlight
                 ? "border-yellow-400 shadow-[0_0_40px_rgba(250,204,21,0.15)]"
                 : "border-white/10 hover:border-yellow-400/50"
             }`}
           >
             {item.badge && (
-              <div className="absolute top-4 right-4 z-10 bg-yellow-400 text-black text-[10px] font-black tracking-[0.2em] px-3 py-2">
+              <div className="absolute bottom-4 right-4 z-10 md:bottom-auto md:top-4 bg-yellow-400 text-black text-[10px] font-black tracking-[0.2em] px-3 py-2">
                 {item.badge}
               </div>
             )}
 
-            <div className="aspect-[4/5] bg-black overflow-hidden">
-              <img
+            <div className="relative order-2 aspect-[4/5] bg-black overflow-hidden md:order-1">
+              <Image
                 src={item.image}
+                fill
+                sizes="(min-width: 1280px) 600px, (min-width: 768px) 45vw, calc(100vw - 40px)"
                 alt={item.name}
                 className="w-full h-full object-cover transition duration-700 group-hover:scale-105"
               />
             </div>
 
-            <div className="p-8">
+            <div className="order-1 p-5 md:order-2 md:p-8">
               <h3 className="text-xl font-bold">{item.name}</h3>
 
-              <p className="text-4xl font-black mt-6 text-yellow-400">
+              <p className="text-3xl md:text-4xl font-black mt-3 md:mt-6 text-yellow-400">
                 {item.price}
               </p>
 
-              <p className="text-neutral-400 mt-6 leading-relaxed">
+              <p className="text-neutral-300 mt-3 md:mt-6 leading-relaxed">
                 {item.desc}
               </p>
 
               <WhatsappButton
                 label={item.label}
-                className="inline-block mt-8 border border-yellow-400 text-yellow-400 px-6 py-3 text-sm hover:bg-yellow-400 hover:text-black transition"
+                className="inline-flex min-h-11 items-center mt-4 md:mt-8 border border-yellow-400 text-yellow-400 px-6 py-3 text-sm hover:bg-yellow-400 hover:text-black transition"
               >
                 ORDER
               </WhatsappButton>
@@ -122,7 +115,7 @@ export default function PricingPage() {
 
       {/* EXTRA */}
       <section className="max-w-6xl mx-auto grid md:grid-cols-3 gap-6 mt-12">
-        <div className="border border-white/10 p-8 rounded-3xl bg-white/[0.04]">
+        <div className="border border-white/10 p-5 md:p-8 rounded-2xl md:rounded-3xl bg-white/[0.04]">
           <h3 className="text-xl font-bold mb-6 text-yellow-400">
             Upgrade Bahan
           </h3>
@@ -133,7 +126,7 @@ export default function PricingPage() {
           ))}
         </div>
 
-        <div className="border border-white/10 p-8 rounded-3xl bg-white/[0.04]">
+        <div className="border border-white/10 p-5 md:p-8 rounded-2xl md:rounded-3xl bg-white/[0.04]">
           <h3 className="text-xl font-bold mb-6 text-yellow-400">
             Add-On
           </h3>
@@ -144,7 +137,7 @@ export default function PricingPage() {
           ))}
         </div>
 
-        <div className="border border-white/10 p-8 rounded-3xl bg-white/[0.04]">
+        <div className="border border-white/10 p-5 md:p-8 rounded-2xl md:rounded-3xl bg-white/[0.04]">
           <h3 className="text-xl font-bold mb-6 text-yellow-400">
             Bonus
           </h3>
@@ -157,12 +150,12 @@ export default function PricingPage() {
       </section>
 
       {/* CTA */}
-      <section className="max-w-6xl mx-auto mt-32 border-t border-white/10 pt-20 text-center">
+      <section className="max-w-6xl mx-auto mt-12 md:mt-32 border-t border-white/10 pt-10 md:pt-20 text-center">
         <p className="text-sm tracking-[0.45em] text-yellow-400 mb-6">
           READY TO ORDER
         </p>
 
-        <h2 className="text-4xl md:text-6xl font-black leading-tight max-w-3xl mx-auto">
+        <h2 className="text-3xl md:text-6xl font-black leading-tight max-w-3xl mx-auto">
           Bingung pilih paket? Konsultasi dulu aja.
         </h2>
 

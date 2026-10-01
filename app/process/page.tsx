@@ -1,3 +1,4 @@
+import SiteNav from "@/components/SiteNav";
 import WhatsappButton from "@/components/WhatsappButton";
 
 export default function ProcessPage() {
@@ -18,28 +19,17 @@ export default function ProcessPage() {
   ];
 
   return (
-    <main className="min-h-screen bg-[#050505] text-white px-6 py-10">
+    <main className="min-h-screen bg-[#050505] text-white px-5 py-5 md:px-6 md:py-10">
       {/* NAV */}
-      <nav className="max-w-6xl mx-auto flex justify-between items-center border-b border-white/10 pb-6">
-        <a href="/" className="text-2xl font-black tracking-[-0.04em]">
-          AURON
-        </a>
-
-        <a
-          href="/"
-          className="text-sm border border-white/20 px-4 py-2 hover:bg-white hover:text-black transition"
-        >
-          BACK
-        </a>
-      </nav>
+      <SiteNav />
 
       {/* HERO */}
-      <section className="max-w-6xl mx-auto pt-16 pb-20">
+      <section className="max-w-6xl mx-auto pt-10 pb-8 md:pt-16 md:pb-20">
         <p className="text-sm tracking-[0.4em] text-yellow-400 mb-6">
           PROCESS
         </p>
 
-        <h1 className="text-5xl md:text-7xl font-black leading-tight max-w-4xl">
+        <h1 className="text-4xl md:text-7xl font-black leading-tight max-w-4xl">
           Free konsultasi. Free desain. Produksi jelas.
         </h1>
 
@@ -68,12 +58,12 @@ export default function ProcessPage() {
       </section>
 
       {/* CTA */}
-      <section className="max-w-6xl mx-auto mt-32 border-t border-white/10 pt-20 text-center">
+      <section className="max-w-6xl mx-auto mt-12 md:mt-32 border-t border-white/10 pt-10 md:pt-20 text-center">
         <p className="text-sm tracking-[0.45em] text-yellow-400 mb-6">
           START YOUR ORDER
         </p>
 
-        <h2 className="text-4xl md:text-6xl font-black leading-tight max-w-3xl mx-auto">
+        <h2 className="text-3xl md:text-6xl font-black leading-tight max-w-3xl mx-auto">
           Sudah punya konsep? Langsung konsultasi dulu.
         </h2>
 
